@@ -31,7 +31,7 @@ namespace GameMakerRegexExtension {
                 string jsonString = "[";
                 
                 for (int i = 0; i < matches.Count; i++)
-                    jsonString += (i == 1? "," : "") + "\"" + matches[i].Value + "\"";
+                    jsonString += (i > 0? "," : "") + "\"" + matches[i].Value + "\"";
 
                 return jsonString + "]";
             } catch (ArgumentException) {
